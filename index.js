@@ -1,10 +1,14 @@
 const express = require('express');
+const cors = require('cors');
+require("dotenv").config();
+
 // const mysql = require("./dbConfig")
 
 
 const router = require("./routes/movie")
 
 const app = express();
+app.use(cors())
 const sequelize = require('./sequelize');
 const Movie = require('./models/movie')
 app.use(express.json())
@@ -23,12 +27,12 @@ app.use(router);
 })();
 
 
-app.listen(8585 , (error)=>{
+app.listen(process.env.PORT , (error)=>{
   if(error){
     console.log(error);
   }
   else{
-    console.log("server listening on");
+    console.log(`server listening on ${process.env.PORT}`);
   }
 })
 

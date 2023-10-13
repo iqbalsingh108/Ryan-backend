@@ -11,7 +11,7 @@ const Movie = sequelize.define('Movie', {
     },
   },
   duration: {
-    type: DataTypes.FLOAT,
+    type: DataTypes.STRING,
     allowNull: false,
   },
   rating: {

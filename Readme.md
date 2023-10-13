@@ -27,8 +27,6 @@ DATABASEUSER= `
 `
 DATABASEPASSWORD=`
 
-`
-PORTNUMBER=`
 
 After successfully installtion run the `npm run dev` command for running the backend server.
  for confirmation the terminal will show: 
